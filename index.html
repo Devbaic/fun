@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .container {
+            background-color: aliceblue;
+            width: 250px;
+            height: 400px;
+            box-shadow: rgb(87, 84, 84) 10px 10px, white 15px 15px;
+            transition: 0.5s;
+        }
+        h4 {
+            font-size: 13px;
+            background-color: rgb(229, 225, 218);
+            width: 245px;
+            box-shadow: black 4px 4px;
+        }
+        button {
+            padding: 0.4rem;
+            box-shadow: black 5px 5px;
+            cursor: pointer;
+        }
+        .btn {
+            display: flex;
+            gap: 5px;
+            position: relative;
+            right: 1rem;
+        }
+        button:active {
+            box-shadow: white 1px 1px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .container:hover {
+            box-shadow: rgb(212, 153, 153) 20px 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="montion">
+            <img src="https://media.tenor.com/Q5enUafiboUAAAAi/cartoon-cute.gif" alt="" id="mo">
+            <h4 id="font">យើងគឺជាចោរឆាប់អោយលុយយើងភ្លាម💨</h4>
+        </div>
+        <div class="btn">
+            <button class="no" style="z-index: 1;">យើងមិនអោយ😏</button>
+            <button onclick="yes()">នេះបងយកទៅ😥</button>
+        </div><br>
+        <div class="contact"><center><button><a href="https://github.com/Devbaic">Contact Me!</a></button></center></div>
+   </div> 
+
+<script>
+    const no = document.querySelector(".no");
+    no.addEventListener("mouseover", function() {
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 200);
+        }
+
+        no.style.position = "absolute";
+        no.style.left = getRandomNumber() + "px";
+        no.style.top = getRandomNumber() + "px";
+    });
+
+    function yes(){
+        document.getElementById("mo").src="https://th.bing.com/th/id/R.d916a1d6410fc456c65e1740240dc20f?rik=x3Fao20Jgv3zfA&pid=ImgRaw&r=0";
+        document.getElementById("mo").style.width="250px";
+        document.getElementById("font").innerHTML="Mission succsess!🤑"
+    }
+</script>
+</body>
+</html>
